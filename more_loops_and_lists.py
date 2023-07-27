@@ -56,3 +56,28 @@ def middle_element(my_list):
     return my_list[int(len(my_list)/2)]
 
 print(middle_element([5, 2, -10, -4, 4, 5]))
+
+# Write a function that counts how many numbers are divisible by ten from a list of numbers. 
+# This function will accept a list of numbers as an input parameter and use a loop to check each of the numbers in the list. 
+# Every time a number is divisible by 10, a counter will be incremented and the final count will be returned. 
+#Write your function here
+def divisible_by_ten(nums):
+  count = 0
+  for number in nums:
+    if (number % 10 == 0):
+      count += 1
+  return count
+
+print(divisible_by_ten([20, 25, 30, 35, 40]))
+
+# You are invited to a social gathering, but you are tired of greeting everyone there. 
+# Luckily we can create a function to accomplish this task for us. 
+# In this challenge, we will take a list of names and prepend the string 'Hello, ' before each name.
+#Write your function here
+def add_greetings(names):
+  greeting_list = []
+  for name in names:
+    greeting_list.append("Hello, " + name)
+  return greeting_list
+
+print(add_greetings(["Owen", "Max", "Sophie", "Sam"]))
