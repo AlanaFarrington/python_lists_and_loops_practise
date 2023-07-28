@@ -81,3 +81,34 @@ def add_greetings(names):
   return greeting_list
 
 print(add_greetings(["Owen", "Max", "Sophie", "Sam"]))
+
+# Let’s try a tricky challenge involving removing elements from a list. 
+# This function will repeatedly remove the first element of a list until it finds an odd number or runs out of elements. 
+# It will accept a list of numbers as an input parameter and return the modified list where any even numbers at the beginning of the list are removed. 
+#Write your function here
+def delete_starting_evens(my_list):
+  while (my_list[0] % 2 == 0):
+    my_list.pop(0)
+    if len(my_list) < 1:
+      break
+  return my_list
+
+#Uncomment the lines below when your function is done
+print(delete_starting_evens([4, 8, 10, 11, 12, 15]))
+print(delete_starting_evens([4, 8, 10]))
+
+# This next function will give us the values from a list at every odd index. 
+# We will need to accept a list of numbers as an input parameter and loop through the odd indices instead of the elements. 
+# Return the list of elements which we got from the odd indices
+#Write your function here
+def odd_indices(my_list):
+  new_list = []
+  for index in range(1, len(my_list), 2):
+      new_list.append(my_list[index])
+  return new_list
+
+print(odd_indices([4, 3, 7, 10, 11, -2]))
+
+# In this challenge, we will be using nested loops in order to raise a list of numbers to the power of a list of other numbers. 
+# What this means is that for every number in the first list, we will raise that number to the power of every number in the second list. 
+# If you provide the first list with 2 elements and the second list with 3 numbers, then there will be 6 final answers. 
