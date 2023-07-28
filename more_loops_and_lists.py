@@ -109,7 +109,21 @@ def odd_indices(my_list):
 
 print(odd_indices([4, 3, 7, 10, 11, -2]))
 
-# In this challenge, we will be using nested loops in order to raise a list of numbers to the power of a list of other numbers. 
-# What this means is that for every number in the first list, we will raise that number to the power of every number in the second list. 
-# If you provide the first list with 2 elements and the second list with 3 numbers, then there will be 6 final answers. 
-def 
+# Create a function named larger_sum() that takes two lists of numbers as parameters named lst1 and lst2.
+# The function should return the list whose elements sum to the greater number. 
+# If the sum of the elements of each list are equal, return lst1.
+
+#Write your function here
+def larger_sum(lst1, lst2):
+  total_list1 = 0
+  total_list2 = 0
+  for number in lst1:
+    total_list1 += number
+  for number in lst2:
+    total_list2 += number
+  if total_list1 >= total_list2:
+    return lst1
+  return lst2 
+
+#Uncomment the line below when your function is done
+print(larger_sum([1, 9, 5], [6, 3, 7]))
