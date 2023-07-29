@@ -127,3 +127,33 @@ def larger_sum(lst1, lst2):
 
 #Uncomment the line below when your function is done
 print(larger_sum([1, 9, 5], [6, 3, 7]))
+
+# Create a function called username_generator take two inputs, first_name and last_name and returns a user_name. 
+# The username should be a slice of the first three letters of their first name and the first four letters of their last name.
+# Now for the temporary password, they want the function to take the input user name and shift all of the letters by one to the 
+# right, so the last letter of the username ends up as the first letter and so forth. 
+# For example, if the username is AbeSimp, then the temporary password generated should be pAbeSim.
+def username_generator(first_name, last_name):
+  user_name = first_name[:3] + last_name[:4]
+  return user_name
+
+def password_generator(user_name):
+  password = ""
+  password = password + user_name[-1]
+  password = password + user_name[:-1]
+  return password
+
+print(password_generator("AbeSimp"))
+
+# rewrite password_generator utilising a loop to iterate through user_name characters
+def password_generator(user_name):
+  password = ""
+  index = 0
+  password = password + user_name[-1]
+  for characters in range(0, len(user_name)):
+    password += user_name[index]
+    index += 1
+    if user_name[index] == user_name[-1]:
+      return password
+
+print(password_generator("AbeSimp"))
